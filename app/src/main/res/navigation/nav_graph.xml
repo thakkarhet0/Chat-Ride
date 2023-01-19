@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragmentNav">
+
+    <fragment
+        android:id="@+id/loginFragmentNav"
+        android:name="com.example.chatroom.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragmentNav_to_chatroomsFragmentNav"
+            app:destination="@id/chatroomsFragmentNav" />
+        <action
+            android:id="@+id/action_loginFragmentNav_to_createNewAccountFragment"
+            app:destination="@id/createNewAccountFragment" />
+        <action
+            android:id="@+id/action_loginFragmentNav_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatroomsFragmentNav"
+        android:name="com.example.chatroom.ChatroomsFragment"
+        android:label="fragment_chatrooms"
+        tools:layout="@layout/fragment_chatrooms">
+        <action
+            android:id="@+id/action_chatroomsFragmentNav_to_loginFragmentNav"
+            app:destination="@id/loginFragmentNav" />
+        <action
+            android:id="@+id/action_chatroomsFragmentNav_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_chatroomsFragmentNav_to_usersFragment"
+            app:destination="@id/usersFragment" />
+        <action
+            android:id="@+id/action_chatroomsFragmentNav_to_chatroomFragment"
+            app:destination="@id/chatroomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewAccountFragment"
+        android:name="com.example.chatroom.CreateNewAccountFragment"
+        android:label="fragment_create_new_account"
+        tools:layout="@layout/fragment_create_new_account" >
+        <action
+            android:id="@+id/action_createNewAccountFragment_to_loginFragmentNav"
+            app:destination="@id/loginFragmentNav" />
+        <action
+            android:id="@+id/action_createNewAccountFragment_to_chatroomsFragmentNav"
+            app:destination="@id/chatroomsFragmentNav" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.chatroom.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragmentNav"
+            app:destination="@id/loginFragmentNav" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.chatroom.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile">
+        <action
+            android:id="@+id/action_userProfileFragment_to_chatroomsFragmentNav"
+            app:destination="@id/chatroomsFragmentNav" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_loginFragmentNav"
+            app:destination="@id/loginFragmentNav" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.chatroom.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users">
+        <action
+            android:id="@+id/action_usersFragment_to_chatroomsFragmentNav"
+            app:destination="@id/chatroomsFragmentNav" />
+        <action
+            android:id="@+id/action_usersFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_usersFragment_to_loginFragmentNav"
+            app:destination="@id/loginFragmentNav" />
+        <action
+            android:id="@+id/action_usersFragment_to_viewUserFragment"
+            app:destination="@id/viewUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatroomFragment"
+        android:name="com.example.chatroom.ChatroomFragment"
+        android:label="ChatroomFragment">
+        <action
+            android:id="@+id/action_chatroomFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_chatroomFragment_to_rideDetailsFragment"
+            app:destination="@id/rideDetailsFragment" />
+        <action
+            android:id="@+id/action_chatroomFragment_to_rideOfferDetailFragment"
+            app:destination="@id/rideOfferDetailFragment" />
+        <action
+            android:id="@+id/action_chatroomFragment_to_tripListFragment"
+            app:destination="@id/tripListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewUserFragment"
+        android:name="com.example.chatroom.ViewUserFragment"
+        android:label="fragment_view_user"
+        tools:layout="@layout/fragment_view_user" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.chatroom.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.chatroom.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps">
+        <action
+            android:id="@+id/action_mapsFragment_to_chatroomFragment"
+            app:destination="@id/chatroomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rideDetailsFragment"
+        android:name="com.example.chatroom.RideDetailsFragment"
+        android:label="fragment_rider_details"
+        tools:layout="@layout/fragment_rider_details">
+        <action
+            android:id="@+id/action_rideDetailsFragment_to_chatroomFragment"
+            app:destination="@id/chatroomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rideOfferDetailFragment"
+        android:name="com.example.chatroom.RideOfferDetailFragment"
+        android:label="fragment_ride_offer_detail"
+        tools:layout="@layout/fragment_ride_offer_detail">
+        <action
+            android:id="@+id/action_rideOfferDetailFragment_to_chatroomFragment"
+            app:destination="@id/chatroomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripListFragment"
+        android:name="com.example.chatroom.TripListFragment"
+        android:label="fragment_trip_list"
+        tools:layout="@layout/fragment_trip_list">
+        <action
+            android:id="@+id/action_tripListFragment_to_tripInfoFragment"
+            app:destination="@id/tripInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripInfoFragment"
+        android:name="com.example.chatroom.TripInfoFragment"
+        android:label="fragment_trip_info"
+        tools:layout="@layout/fragment_trip_info" />
+</navigation>
